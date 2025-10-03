@@ -1,0 +1,15 @@
+[submodule "Documentation/doxygen/doxygen-awesome-css"]
+	path = Documentation/doxygen/doxygen-awesome-css
+	url = https://github.com/jothepro/doxygen-awesome-css.git
+[submodule "Plugins/Editor/UEGitPlugin"]
+	path = Plugins/Editor/UEGitPlugin
+	url = https://github.com/ProjectBorealis/UEGitPlugin.git
+[submodule "Scripts/CI/ciscripts"]
+	path = Scripts/CI/ciscripts
+	url = https://github.com/AWildErin/ciscripts.git
+[submodule "Plugins/Editor/CommonMaps"]
+	path = Plugins/Editor/CommonMaps
+	url = https://github.com/AWildErin/CommonMaps.git
+[submodule "Plugins/OurFramework"]
+	path = Plugins/OurFramework
+	url = https://github.com/AWildErin/OurFramework.git
