@@ -17,7 +17,7 @@ script_path = os.path.abspath(__file__)
 script_directory = os.path.dirname(script_path)
 root_path = os.path.dirname(script_directory)
 
-submodule_status_regex = re.compile(r'(.*) (.*) \((.*)\)')
+submodule_status_regex = re.compile(r'[+\-U]?([\w]+) ([^ ]+)(?: \(([^)]+)\))?')
 git_default_branch = 'main'
 
 def fix_slashes(str) -> str:
@@ -29,7 +29,8 @@ def remove_readonly(func, path, _):
     func(path)
 
 def remove_directory(path):
-    shutil.rmtree(path, onexc=remove_readonly)
+    if os.path.exists(path):
+        shutil.rmtree(path, onexc=remove_readonly)
 
 def build_file_list(path) -> list:
     file_list = []
